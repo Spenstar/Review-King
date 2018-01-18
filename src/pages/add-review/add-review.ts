@@ -18,20 +18,19 @@ export class AddReviewPage {
   description: any;
   rating: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController) {
-
-  }
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public viewCtrl: ViewController
+  ) { }
 
   save(): void {
-
     let review = {
       title: this.title,
       description: this.description,
       rating: this.rating
     };
-
     this.viewCtrl.dismiss(review);
-
   }
 
   close(): void {
